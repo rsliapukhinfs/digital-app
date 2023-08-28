@@ -1,10 +1,10 @@
 import Navbar from "@/comps/navbar/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Phudu } from "next/font/google";
 import Footer from "@/comps/footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const phudu = Phudu({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+      <body className={phudu.className}>
+        <div className="min-h-screen max-w-7xl mx-auto flex flex-col items-center justify-between">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

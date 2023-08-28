@@ -36,9 +36,11 @@ const links = [
 
 const Navbar = () => {
   return (
-    <header>
-      <Link href="/">digital</Link>
-      <nav>
+    <header className="w-full flex items-center justify-between h-16">
+      <Link href="/" className="font-bold text-2xl">
+        digital
+      </Link>
+      <nav className="flex gap-4">
         {links.map((link) => (
           <Link href={link.url} key={link.id}>
             {link.title}
